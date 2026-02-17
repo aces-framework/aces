@@ -1,0 +1,18 @@
+# Crate name uses hyphen-separated lowercase (STANDARDS.md §1)
+[package]
+name = "aces-REPO_NAME"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.83"  # Must match rust-toolchain.toml
+license = "Apache-2.0"
+repository = "https://github.com/aces-framework/aces-REPO_NAME"
+description = "REPO-SPECIFIC: one-line description"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+
+[dependencies]
+# REPO-SPECIFIC: add dependencies
+
+[dev-dependencies]
+# REPO-SPECIFIC: add test dependencies

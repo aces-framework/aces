@@ -1,0 +1,19 @@
+# cargo-deny configuration (STANDARDS.md §13)
+# Run: cargo deny check
+
+[licenses]
+allow = [
+    "Apache-2.0",
+    "MIT",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+]
+
+[bans]
+multiple-versions = "warn"
+deny = []
+
+[advisories]
+vulnerability = "deny"

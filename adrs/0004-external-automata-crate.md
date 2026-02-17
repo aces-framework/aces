@@ -31,7 +31,7 @@ crates.io with no ACES dependency. The crate provides:
 
 The dependency chain:
 
-```
+```text
 automata crate (independent, crates.io)
     ^
 aces-sdl (Tier 2 verification)

@@ -6,9 +6,10 @@ Accepted
 
 ## Context
 
-Tier 3 (capability) verification asks: "Can the connected backends actually
-provision this scenario?" This requires checking provider capabilities
-against scenario requirements before committing resources.
+The four-tier verification model (ADR-0002) defines Tier 3 (capability)
+verification, which asks: "Can the connected backends actually provision
+this scenario?" This requires checking provider capabilities against
+scenario requirements before committing resources.
 
 Terraform solves this with `terraform plan` — providers implement a planning
 mode that reports what would change without actually provisioning. This
@@ -19,7 +20,7 @@ pattern is well-proven at scale.
 The provider SDK contract includes a `DryRun()` / `Plan()` API alongside
 `Provision()`. Providers must implement it.
 
-```
+```text
 DryRun(spec) -> {
     feasible: bool,
     issues: [{ severity, message, affected_resource }],

@@ -1,0 +1,14 @@
+# MD013 - line length. Disabled because ADRs and tables routinely exceed 80 chars.
+MD013: false
+
+# MD024 - multiple headings with same content. Allow because STANDARDS.md
+# uses repeated language-specific subsections (Rust, Python) under different
+# parent sections by design.
+MD024: false
+
+# MD033 - inline HTML. Allow for tables and diagrams.
+MD033: false
+
+# MD041 - first line should be a top-level heading. Disabled because GitHub
+# issue/PR templates use YAML front matter or start with ## headings by design.
+MD041: false

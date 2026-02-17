@@ -4,8 +4,8 @@ ACES is an open reference architecture for declarative, reproducible cyber
 range environments designed for autonomous AI agent research and evaluation.
 
 This repository is the governance hub for the ACES project. It contains
-community guidelines, architectural decision records, RFCs for cross-cutting
-changes, and cross-repo coordination infrastructure.
+architectural decision records, RFCs for cross-cutting changes, engineering
+standards, and cross-repo coordination infrastructure.
 
 **This repo does NOT contain application code.**
 
@@ -27,15 +27,19 @@ changes, and cross-repo coordination infrastructure.
 
 ## Architecture
 
-ACES decomposes cyber range concerns into four layers:
+ACES decomposes cyber range concerns into four layers: Specification (what
+the scenario expresses), Runtime (what services coordinate during
+execution), Instantiation (how specs bind to backends and participants),
+and Experimentation (how experimental controls enable reproducible
+research). See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the full
+architecture reference including dependency graph, interface boundaries,
+and build order.
 
-1. **Specification** — What the scenario expresses (schema + SDL)
-2. **Runtime** — What services coordinate during execution
-3. **Instantiation** — How specs bind to backends and participants
-4. **Experimentation** — How experimental controls enable reproducible research
+## Standards
 
-See the [ACES paper](https://github.com/aces-framework/aces-research-docs)
-(private) for the full architectural rationale.
+Cross-cutting engineering conventions (logging, errors, observability,
+testing, security, CI/CD, code style) are defined in
+[`STANDARDS.md`](STANDARDS.md).
 
 ## Governance
 
@@ -43,10 +47,6 @@ See the [ACES paper](https://github.com/aces-framework/aces-research-docs)
 - **RFCs**: Cross-cutting changes require an RFC in [`rfcs/`](rfcs/).
 - **Compatibility matrix**: Tested-compatible versions across repos are
   tracked in [`COMPATIBILITY.md`](COMPATIBILITY.md).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

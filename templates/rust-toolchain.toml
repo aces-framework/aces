@@ -1,0 +1,3 @@
+[toolchain]
+channel = "1.83"  # MSRV: latest stable minus one (STANDARDS.md §11)
+components = ["rustfmt", "clippy"]

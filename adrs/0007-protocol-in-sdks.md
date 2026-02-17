@@ -12,6 +12,7 @@ runtime-to-agent, and CLI-to-runtime. The wire protocol definitions (gRPC
 across the SDKs.
 
 Three options were evaluated:
+
 - Option A: Single `aces-protocol` repo (like opentelemetry-proto)
 - Option B: Each SDK owns its protocol
 - Option C: Protocol in SDKs, runtime implements both

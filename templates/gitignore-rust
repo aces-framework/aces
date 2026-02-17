@@ -1,0 +1,22 @@
+# Build artifacts
+/target/
+
+# Cargo.lock: commit for binaries, .gitignore for libraries.
+# Uncomment the next line for library crates:
+# Cargo.lock
+
+# Editor and IDE
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
