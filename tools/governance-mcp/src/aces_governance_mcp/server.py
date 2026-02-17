@@ -351,7 +351,7 @@ _CI_EXPECTED_JOB: dict[str, str] = {
 }
 
 _CI_EXPECTED_STEPS: dict[str, list[str]] = {
-    "rust": ["cargo fmt", "cargo clippy", "cargo test", "cargo doc", "cargo deny"],
+    "rust": ["cargo fmt", "cargo clippy", "cargo test", "cargo doc", "cargo deny", "cargo audit"],
     "python": ["ruff check", "ruff format", "mypy", "pytest", "pip-audit"],
     "governance": ["pre-commit run"],
 }

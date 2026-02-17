@@ -430,7 +430,8 @@ subsections below.
   vulnerabilities. Configuration in `cargo-deny.toml` per repo (see
   §13 for dependency management policy).
 - `cargo deny check` runs in CI after tests.
-- `cargo-audit` for RUSTSEC advisory database checks. [PRE-1.0]
+- `cargo-audit` for RUSTSEC advisory database checks. Runs in CI
+  after `cargo deny check`.
 
 #### Python
 

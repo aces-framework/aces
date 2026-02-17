@@ -91,6 +91,7 @@ def governance_repo(tmp_path: Path) -> Path:
         "      - run: cargo test\n"
         "      - run: cargo doc --no-deps\n"
         "      - run: cargo deny check\n"
+        "      - run: cargo audit\n"
     )
     (templates / "ci-python.yaml").write_text(
         "name: CI\njobs:\n  check:\n"
@@ -166,6 +167,7 @@ def compliant_rust_repo(tmp_path: Path, governance_repo: Path) -> Path:
         "      - run: cargo test\n"
         "      - run: cargo doc --no-deps\n"
         "      - run: cargo deny check\n"
+        "      - run: cargo audit\n"
     )
 
     return repo
