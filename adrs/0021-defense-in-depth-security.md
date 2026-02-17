@@ -46,7 +46,7 @@ Prevent malicious or vulnerable code from entering the dependency tree.
 - **Rust**: `cargo-deny` (existing) checks licenses, duplicates, and
   known vulnerabilities. [NOW]
 - **Rust**: `cargo-audit` added to CI for advisory database checks.
-  [PRE-1.0]
+  [NOW]
 - **Python**: `pip-audit` added to CI for known vulnerability checks.
   [NOW]
 - **GitHub Actions**: All third-party actions pinned by full commit SHA,

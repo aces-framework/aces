@@ -17,7 +17,7 @@ This keeps the report private until a fix is available.
 
 ### Alternative: Email
 
-Send an email to **security@aces-framework.org** with:
+Send an email to **<security@aces-framework.org>** with:
 
 - Description of the vulnerability.
 - Steps to reproduce.
