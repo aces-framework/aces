@@ -7,6 +7,17 @@
   user to run (commits must be GPG-signed).
 - NEVER push without explicit user approval.
 - NEVER create documentation files unless explicitly asked.
+- NEVER hand-edit dependency versions in manifest files. Use the package
+  manager CLI: `cargo add`/`cargo rm` for Rust, `uv add`/`uv remove`
+  for Python.
+- ALWAYS scaffold new projects with `cargo init`/`uv init`. Do not write
+  manifest files from scratch.
+- ALWAYS use virtual environments for Python (`uv venv`). No global
+  installs.
+- ALWAYS write a design/spec before implementing non-trivial components.
+  No code without an approved design.
+- ALWAYS write tests before implementation (TDD). Tests must fail first,
+  then write the code to make them pass.
 
 ## Project
 
@@ -93,6 +104,12 @@ This repo is: **REPO_NAME** — REPO_DESCRIPTION
 ### Repo-Specific Conventions
 
 <!-- Any conventions unique to this repo beyond the project-wide standards -->
+
+## Lessons Learned
+
+<!-- Add lessons as they're discovered during development. Format:
+- **[Topic]**: What happened and what to do instead. 1-2 sentences.
+Promote recurring lessons to Critical Rules. Prune when obsolete. -->
 
 ## Key References
 

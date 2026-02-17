@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-02-16
+
+### Added
+
+- ADR-0021: Defense-in-depth security standards (five-layer model).
+- SECURITY.md vulnerability disclosure template for all repos.
+- Supply chain scanning in CI (cargo-deny for Rust, pip-audit for Python).
+- Private vulnerability reporting in GitHub repo setup.
+
+### Changed
+
+- Expanded STANDARDS.md §10 (Security) from 3 subsections to 12.
+- CI templates pin all GitHub Actions by commit SHA instead of mutable tag.
+- Governance MCP compliance checker validates SECURITY.md and new CI steps.
+
 ## [0.1.0] - 2025-02-16
 
 ### Added

@@ -7,6 +7,17 @@
   user to run (commits must be GPG-signed).
 - NEVER push without explicit user approval.
 - NEVER create documentation files unless explicitly asked.
+- NEVER hand-edit dependency versions in manifest files. Use the package
+  manager CLI: `cargo add`/`cargo rm` for Rust, `uv add`/`uv remove`
+  for Python.
+- ALWAYS scaffold new projects with `cargo init`/`uv init`. Do not write
+  manifest files from scratch.
+- ALWAYS use virtual environments for Python (`uv venv`). No global
+  installs.
+- ALWAYS write a design/spec before implementing non-trivial components.
+  No code without an approved design.
+- ALWAYS write tests before implementation (TDD). Tests must fail first,
+  then write the code to make them pass.
 
 ## Project
 
@@ -97,9 +108,24 @@ None. This is the root governance repo. All other repos reference it.
 ### Repo-Specific Conventions
 
 - Markdown-only. No application code, no build system.
-- ADRs follow the template in `adrs/TEMPLATE.md`. Next ADR: 0019.
+- ADRs follow the template in `adrs/TEMPLATE.md`. Next ADR: 0022.
 - RFCs follow the template in `rfcs/TEMPLATE.md`.
 - New repo templates go in `templates/` (see `templates/README.md`).
+
+## Lessons Learned
+
+- **Dependency manifests**: An agent hand-wrote a `pyproject.toml` with
+  inlined version pins instead of using `uv init` + `uv add`. This
+  bypasses constraint resolution and lock file generation. Always use
+  package manager CLI tools.
+- **Spec before code**: An agent jumped to implementing an MCP server
+  without writing a design spec or getting approval. The result was
+  half-built throwaway code. Non-trivial components require a written
+  spec, review, then TDD.
+- **Standards gaps are bugs**: When an agent violates a convention that
+  isn't written down, the fix is two things — update the standards AND
+  fix the code. A rule that only exists in memory will be violated
+  again.
 
 ## Key References
 

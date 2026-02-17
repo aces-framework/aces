@@ -1,0 +1,36 @@
+[project]
+name = "aces-governance-mcp"
+version = "0.1.0"
+description = "Active governance agent for ACES — exposes standards, validates compliance, and routes ADR proposals"
+license = "Apache-2.0"
+readme = "README.md"
+authors = [
+    { name = "Brad Edwards", email = "j.bradley.edwards@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.26.0",
+]
+
+[project.scripts]
+aces-governance-mcp = "aces_governance_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+strict = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pytest>=9.0.2",
+    "ruff>=0.15.1",
+]
